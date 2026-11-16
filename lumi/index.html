@@ -13,12 +13,15 @@
   h1{font-size:1.6rem;margin:.2rem 0 1rem} h2{font-size:1.15rem;margin:2rem 0 .4rem}
   .en{direction:ltr;text-align:left;margin-top:3rem;padding-top:2rem;border-top:1px solid color-mix(in srgb,var(--fg) 15%,transparent)}
   small,.muted{color:var(--muted)} a{color:inherit}
-  @media (orientation:landscape) and (max-height:450px){main{padding-top:1rem}main>h1{padding-right:7.25rem;min-height:5rem}}
+  main>h1>span{direction:ltr;unicode-bidi:isolate}
+  @media (max-width:700px){main>h1>span{display:block;text-align:left;font-size:.82em;margin-top:.2rem}}
+  @media (max-width:700px),(orientation:landscape) and (max-height:450px){main>h1{padding-right:7.25rem;min-height:5rem}}
+  @media (orientation:landscape) and (max-height:450px){main>h1{min-height:7.5rem}main{padding-top:1rem}}
 </style>
 </head>
 <body>
 <main>
-<h1>سياسة الخصوصية — لعبة لومي (Lumi Wonderland)</h1>
+<h1>سياسة الخصوصية — لعبة لومي <span lang="en" dir="ltr">Lumi Wonderland</span></h1>
 <p class="muted">آخر تحديث: 14 نوفمبر 2026</p>
 
 <h2>من نحن</h2>
