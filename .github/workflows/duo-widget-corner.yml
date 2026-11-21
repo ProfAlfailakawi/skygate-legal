@@ -15,4 +15,4 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: node --test .github/tests/
+      - run: node --test .github/tests/duo-widget-corner.test.mjs

@@ -1,6 +1,6 @@
 // ركن ودجت iPhone Duo: صفحات الموقع ثابتة بلا علامات Duo، فلا يجوز أن تحجز ركناً بحجم النافذة وحده.
 // الحجز بالعرض وحده كان يطابق كل iPhone عادي (390–430) ونافذة الحاسوب الضيقة فيترك شريطاً فارغاً بنحو 124px على اليمين.
-// التشغيل: node --test .github/tests/
+// التشغيل: node --test .github/tests/duo-widget-corner.test.mjs
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
