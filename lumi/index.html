@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>سياسة الخصوصية — لومي Lumi Wonderland</title>
+<script src="../duo.js"></script>
 <style>
   :root{color-scheme:light dark;--fg:#1d1d1f;--bg:#fbfaf7;--muted:#5f5f66}
   @media (prefers-color-scheme:dark){:root{--fg:#f2f2f7;--bg:#151517;--muted:#a1a1a8}}
@@ -17,10 +18,21 @@
   @media (max-width:700px){main>h1>span{display:block;text-align:left;font-size:.82em;margin-top:.2rem}}
   @media (max-width:700px),(orientation:landscape) and (max-height:450px){main>h1{padding-right:7.25rem;min-height:5rem}}
   @media (orientation:landscape) and (max-height:450px){main>h1{min-height:7.5rem}main{padding-top:1rem}}
+  /* iPhone Duo only: no fixed widget strip in Safari; app insets come from iOS. */
+  html[data-device="duo"] main{padding:max(1rem,env(safe-area-inset-top)) max(1.1rem,env(safe-area-inset-right)) max(2rem,env(safe-area-inset-bottom)) max(1.1rem,env(safe-area-inset-left))}
+  html[data-device="duo"] main h1{padding-right:0;min-height:0;font-size:1.3rem;line-height:1.45;margin:.2rem 0 .6rem}
+  html[data-device="duo"] main h2{margin-top:1.4rem}
+  html[data-device="duo"] .en{margin-top:2rem;padding-top:1.4rem}
+  @media (orientation:landscape) and (min-width:860px){
+    html[data-device="duo"] main{max-width:none;height:100svh;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;column-gap:48px;padding-inline:max(1.1rem,env(safe-area-inset-left),env(safe-area-inset-right))}
+    html[data-device="duo"] main>.ar,html[data-device="duo"] main>.en{min-height:0;overflow:auto;margin:0;padding:.4rem 1rem 2rem;border:0;border-radius:22px}
+    html[data-device="duo"] main>.ar{background:color-mix(in srgb,var(--fg) 5%,transparent)}
+  }
 </style>
 </head>
 <body>
 <main>
+<div class="ar">
 <h1>سياسة الخصوصية — لعبة لومي <span lang="en" dir="ltr">Lumi Wonderland</span></h1>
 <p class="muted">آخر تحديث: 14 نوفمبر 2026</p>
 
@@ -51,6 +63,7 @@
 <h2>التغييرات</h2>
 <p>إن غيّرنا هذه السياسة سننشر النسخة الجديدة في هذه الصفحة مع تاريخ التحديث.</p>
 
+</div>
 <section class="en" lang="en">
 <h1>Privacy Policy — Lumi Wonderland</h1>
 <p class="muted">Last updated: 14 November 2026</p>

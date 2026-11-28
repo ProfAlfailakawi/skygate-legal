@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>الدعم — شركة سكاي جيت · Support — SKY GATE</title>
+<script src="../duo.js"></script>
 <style>
   :root{color-scheme:light dark;--fg:#1d1d1f;--bg:#fbfaf7;--muted:#5f5f66}
   @media (prefers-color-scheme:dark){:root{--fg:#f2f2f7;--bg:#151517;--muted:#a1a1a8}}
@@ -12,13 +13,25 @@
   h1{font-size:1.5rem} .en{direction:ltr;text-align:left;margin-top:2.5rem} a{color:inherit;font-weight:600}
   @media (max-width:700px),(orientation:landscape) and (max-height:450px){main>h1{padding-right:7.25rem;min-height:5rem}}
   @media (orientation:landscape) and (max-height:450px){main>h1{min-height:7.5rem}main{padding-top:1.25rem}}
+  /* iPhone Duo only: no fixed widget strip in Safari; app insets come from iOS. */
+  html[data-device="duo"] main{padding:max(1rem,env(safe-area-inset-top)) max(1.1rem,env(safe-area-inset-right)) max(2rem,env(safe-area-inset-bottom)) max(1.1rem,env(safe-area-inset-left))}
+  html[data-device="duo"] main h1{padding-right:0;min-height:0;font-size:1.3rem;line-height:1.45;margin:.2rem 0 .6rem}
+  html[data-device="duo"] main h2{margin-top:1.4rem}
+  html[data-device="duo"] .en{margin-top:2rem;padding-top:1.4rem}
+  @media (orientation:landscape) and (min-width:860px){
+    html[data-device="duo"] main{max-width:none;height:100svh;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;column-gap:48px;padding-inline:max(1.1rem,env(safe-area-inset-left),env(safe-area-inset-right))}
+    html[data-device="duo"] main>.ar,html[data-device="duo"] main>.en{min-height:0;overflow:auto;margin:0;padding:.4rem 1rem 2rem;border:0;border-radius:22px}
+    html[data-device="duo"] main>.ar{background:color-mix(in srgb,var(--fg) 5%,transparent)}
+  }
 </style>
 </head>
 <body>
 <main>
+<div class="ar">
 <h1>الدعم الفني</h1>
 <p>لأي سؤال أو مشكلة في تطبيقاتنا، راسلنا على <a href="mailto:info@skygateeducation.com">info@skygateeducation.com</a> وسنرد في أقرب وقت. اذكر اسم التطبيق ونوع جهازك.</p>
 <p><strong>شركة سكاي جيت للاستشارات التربوية</strong> — دولة الكويت.</p>
+</div>
 <section class="en" lang="en">
 <h1>Support</h1>
 <p>For any question or problem with our apps, email <a href="mailto:info@skygateeducation.com">info@skygateeducation.com</a> and we will reply as soon as we can. Please tell us the app name and your device.</p>
